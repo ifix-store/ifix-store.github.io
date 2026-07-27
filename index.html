@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" manifest="cache.manifest">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iFix - PlayStation Exploit Host</title>
+  <link rel="stylesheet" href="includes/style.css">
+</head>
+<body>
+
+  <!-- Floating PlayStation Shapes in Background -->
+  <div class="ps-shapes">
+    <span class="shape triangle">▲</span>
+    <span class="shape square">■</span>
+    <span class="shape circle">●</span>
+    <span class="shape cross">✖</span>
+  </div>
+
+  <div class="container">
+    <!-- Header/Logo section -->
+    <header class="header">
+      <div class="logo-box">
+        <!-- ضع صورة اللوجو هنا باسم logo.png داخل مجلد includes -->
+        <img src="includes/logo.png" alt="iFix Logo" class="brand-logo" onerror="this.style.display='none'">
+        <h1 class="brand-title"><span class="red-text">i</span>Fix HOST</h1>
+      </div>
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span id="UA">جاري فحص الجهاز...</span>
+      </div>
+    </header>
+
+    <!-- Main Exploit Box -->
+    <main class="card">
+      <div class="card-header">
+        <h2>تفعيل التعديلة</h2>
+      </div>
+
+      <!-- Exploit selection -->
+      <form id="kernel-options" class="options-group">
+        <span class="options-label">اختيار الثغرة:</span>
+        <label class="radio-label">
+          <input type="radio" name="kernel" id="netctrl-exploit" value="netctrl">
+          NetCtrl
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="kernel" id="lapse-exploit" value="lapse">
+          Lapse
+        </label>
+      </form>
+
+      <!-- Action Button & Auto JB Option -->
+      <div class="action-zone">
+        <button id="jeilbrek" class="btn-primary">تفعيل التعديلة الان</button>
+
+        <div class="autoJb">
+          <label for="autoJbInput" id="autoJbLabel" class="checkbox-label">التفعيل التلقائي</label>
+          <input id="autoJbInput" type="checkbox">
+        </div>
+      </div>
+
+      <!-- Console / Output display -->
+      <div class="console-wrapper">
+        <pre id="console">جاهز للاستخدام. في انتظار التشغيل...</pre>
+      </div>
+    </main>
+
+    <!-- Footer with phone numbers -->
+    <footer class="footer">
+      <p class="contacts">📞 01270081459 | 📞 01281398314</p>
+      <p>جميع الحقوق محفوظة لـ <strong>iFix Store</strong> &copy; 2026</p>
+    </footer>
+  </div>
+
+  <script src="src/main.js"></script>
+  <script src="includes/script.js"></script>
+</body>
+</html>
