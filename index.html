@@ -8,25 +8,13 @@
 </head>
 <body>
 
-  <!-- Floating PlayStation Shapes in Background -->
-  <div class="ps-shapes">
-    <span class="shape triangle">▲</span>
-    <span class="shape square">■</span>
-    <span class="shape circle">●</span>
-    <span class="shape cross">✖</span>
-  </div>
-
   <div class="container">
-    <!-- Header/Logo section -->
+    <!-- Header Section -->
     <header class="header">
-      <div class="logo-box">
-        <!-- ضع صورة اللوجو هنا باسم logo.png داخل مجلد includes -->
-        <img src="includes/logo.png" alt="iFix Logo" class="brand-logo" onerror="this.style.display='none'">
-        <h1 class="brand-title"><span class="red-text">i</span>Fix HOST</h1>
-      </div>
+      <h1 class="brand-title"><span class="blue-text">i</span>Fix STORE HOST</h1>
       <div class="status-badge">
         <span class="status-dot"></span>
-        <span id="UA">جاري فحص الجهاز...</span>
+        <span id="UA-short">جاري فحص الجهاز...</span>
       </div>
     </header>
 
@@ -51,11 +39,11 @@
 
       <!-- Action Button & Auto JB Option -->
       <div class="action-zone">
-        <button id="jeilbrek" class="btn-primary">تفعيل التعديلة الان</button>
+        <button id="jeilbrek" class="btn-primary">تفعيل التعديلة الآن</button>
 
         <div class="autoJb">
-          <label for="autoJbInput" id="autoJbLabel" class="checkbox-label">التفعيل التلقائي</label>
           <input id="autoJbInput" type="checkbox">
+          <label for="autoJbInput" id="autoJbLabel" class="checkbox-label">التفعيل التلقائي</label>
         </div>
       </div>
 
@@ -65,10 +53,17 @@
       </div>
     </main>
 
-    <!-- Footer with phone numbers -->
+    <!-- Footer Section -->
     <footer class="footer">
-      <p class="contacts">📞 01270081459 | 📞 01281398314</p>
-      <p>جميع الحقوق محفوظة لـ <strong>iFix Store</strong> &copy; 2026</p>
+      <div class="info-card">
+        <p class="contacts">📞 01270081459 &nbsp;|&nbsp; 📞 01281398314</p>
+        <p class="address">📍 العجمي - الهانوفيل - مول بانوراما - بجانب حلواني آية</p>
+      </div>
+      
+      <div class="developer-info">
+        <p class="copyright">جميع الحقوق محفوظة لـ <strong>iFix Store</strong> &copy; 2026</p>
+        <p class="dev-credits">Developed by: <span class="dev-name">Shawky Ali</span> | 📞 01278408790</p>
+      </div>
     </footer>
   </div>
 
