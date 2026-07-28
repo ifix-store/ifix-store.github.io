@@ -9,65 +9,122 @@
 <body>
 
   <div class="container">
-    <!-- Header Section -->
+
+    <!-- Header -->
     <header class="header">
-      <h1 class="brand-title"><span class="blue-text">i</span>Fix STORE HOST</h1>
+      <h1 class="brand-title">
+        <span class="blue-text">i</span>Fix STORE HOST
+      </h1>
+
       <div class="status-badge">
         <span class="status-dot"></span>
-        <span id="UA-short">جاري فحص الجهاز...</span>
+
+        <!-- مهم جداً - لا تغير الـ id -->
+        <h3 id="UA" style="margin:0;font-size:14px;font-weight:normal;">
+          جاري فحص الجهاز...
+        </h3>
       </div>
     </header>
 
-    <!-- Main Exploit Box -->
+    <!-- Main Card -->
     <main class="card">
+
       <div class="card-header">
         <h2>تفعيل التعديلة</h2>
       </div>
 
-      <!-- Exploit selection -->
       <form id="kernel-options" class="options-group">
-        <span class="options-label">اختيار الثغرة:</span>
+
+        <span class="options-label">
+          اختيار الثغرة:
+        </span>
+
         <label class="radio-label">
-          <input type="radio" name="kernel" id="netctrl-exploit" value="netctrl">
+          <input
+            type="radio"
+            name="kernel"
+            id="netctrl-exploit"
+            value="netctrl">
           NetCtrl
         </label>
+
         <label class="radio-label">
-          <input type="radio" name="kernel" id="lapse-exploit" value="lapse">
+          <input
+            type="radio"
+            name="kernel"
+            id="lapse-exploit"
+            value="lapse">
           Lapse
         </label>
+
       </form>
 
-      <!-- Action Button & Auto JB Option -->
       <div class="action-zone">
-        <button id="jeilbrek" class="btn-primary">تفعيل التعديلة الآن</button>
+
+        <button id="jeilbrek" class="btn-primary">
+          تفعيل التعديلة الآن
+        </button>
 
         <div class="autoJb">
-          <input id="autoJbInput" type="checkbox">
-          <label for="autoJbInput" id="autoJbLabel" class="checkbox-label">التفعيل التلقائي</label>
+
+          <input
+            id="autoJbInput"
+            type="checkbox">
+
+          <label
+            id="autoJbLabel"
+            class="checkbox-label"
+            for="autoJbInput">
+            التفعيل التلقائي
+          </label>
+
         </div>
+
       </div>
 
-      <!-- Console / Output display -->
       <div class="console-wrapper">
         <pre id="console">جاهز للاستخدام. في انتظار التشغيل...</pre>
       </div>
+
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer class="footer">
+
       <div class="info-card">
-        <p class="contacts">📞 01270081459 &nbsp;|&nbsp; 📞 01281398314</p>
-        <p class="address">📍 العجمي - الهانوفيل - مول بانوراما - بجانب حلواني آية</p>
+        <p class="contacts">
+          📞 01270081459 |
+          📞 01281398314
+        </p>
+
+        <p class="address">
+          📍 العجمي - الهانوفيل - مول بانوراما - بجانب حلواني آية
+        </p>
       </div>
-      
+
       <div class="developer-info">
-        <p class="copyright">جميع الحقوق محفوظة لـ <strong>iFix Store</strong> &copy; 2026</p>
-        <p class="dev-credits">Developed by: <span class="dev-name">Shawky Ali</span> | 📞 01278408790</p>
+        <p class="copyright">
+          جميع الحقوق محفوظة لـ
+          <strong>iFix Store</strong>
+          &copy; 2026
+        </p>
+
+        <p class="dev-credits">
+          Developed by:
+          <span class="dev-name">
+            Shawky Ali
+          </span>
+          |
+          📞 01278408790
+        </p>
       </div>
+
     </footer>
+
   </div>
 
   <script src="src/main.js"></script>
   <script src="includes/script.js"></script>
+
 </body>
 </html>
