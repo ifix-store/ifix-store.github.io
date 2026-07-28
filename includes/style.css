@@ -1,257 +1,160 @@
+/* إعدادات المتغيرات والألوان */
 :root {
-    --primary-blue: #00d2ff;
-    --primary-blue-hover: #0099ff;
-    --card-bg: rgba(6, 15, 30, 0.82);
-    --text-light: #ffffff;
-    --text-muted: #a0c4ff;
-    --border-color: rgba(0, 210, 255, 0.4);
+  --bg-overlay: rgba(15, 23, 42, 0.85);
+  --card-bg: rgba(30, 41, 59, 0.75);
+  --accent-color: #00f2fe;
+  --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --text-main: #f8fafc;
+  --text-sub: #94a3b8;
+  --console-bg: #090d16;
+  --console-green: #38ef7d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background: url('../background-mobile.png') no-repeat center center fixed;
-    background-size: cover;
-    color: var(--text-light);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 15px;
-    min-height: 100vh;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../background-mobile.png') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-main);
+  padding: 20px;
 }
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 5, 15, 0.4);
-    z-index: 0;
+/* بطاقة الواجهة الرئيسية */
+.app-card {
+  width: 100%;
+  max-width: 600px;
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
-.container {
-    width: 100%;
-    max-width: 750px;
-    position: relative;
-    z-index: 1;
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
 }
 
-.header {
-    text-align: center;
-    margin-bottom: 15px;
+#UA {
+  font-size: 0.95rem;
+  color: var(--text-sub);
+  font-weight: 400;
+  margin-bottom: 15px;
 }
 
-.brand-title {
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin: 0 0 8px 0;
-    text-transform: uppercase;
-    text-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 15px 0 20px 0;
 }
 
-.blue-text {
-    color: var(--primary-blue);
-    text-shadow: 0 0 15px rgba(0, 210, 255, 0.8);
+/* خيارات النواة والأزرار */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.status-badge {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(0, 15, 35, 0.75);
-    padding: 6px 18px;
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    font-size: 13px;
-    color: var(--text-muted);
-    backdrop-filter: blur(5px);
-}
-
-.status-dot {
-    width: 8px;
-    height: 8px;
-    background-color: var(--primary-blue);
-    border-radius: 50%;
-    margin-left: 8px;
-    box-shadow: 0 0 10px var(--primary-blue);
-}
-
-.card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 18px;
-    padding: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 210, 255, 0.2);
-    backdrop-filter: blur(10px);
-}
-
-.card-header h2 {
-    margin: 0 0 15px 0;
-    font-size: 20px;
-    text-align: center;
-    color: var(--text-light);
-    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
-}
-
-.options-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 18px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 210, 255, 0.15);
-}
-
-.options-label {
-    color: var(--text-muted);
-    font-weight: bold;
-    font-size: 14px;
+#kernel-options {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 
 .radio-label {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 
-input[type="radio"] {
-    accent-color: var(--primary-blue);
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+.radio-label:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
-.action-zone {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 18px;
+/* زر التشغيل الرئيسي */
+#jeilbrek {
+  width: 100%;
+  max-width: 250px;
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent-gradient);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn-primary {
-    background: linear-gradient(135deg, #00d2ff 0%, #0072ff 100%);
-    color: #ffffff;
-    border: none;
-    padding: 14px 45px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 20px rgba(0, 210, 255, 0.5);
-}
-
-.btn-primary:hover {
-    background: linear-gradient(135deg, #00e5ff 0%, #0088ff 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 28px rgba(0, 210, 255, 0.7);
-}
-
-.btn-primary:disabled {
-    background: #112a45;
-    color: #6688aa;
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
+#jeilbrek:active {
+  transform: scale(0.97);
 }
 
 .autoJb {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text-sub);
 }
 
-.checkbox-label {
-    color: var(--text-muted);
-    font-size: 14px;
+.autoJb input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
 }
 
-input[type="checkbox"] {
-    accent-color: var(--primary-blue);
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+/* الشاشة والـ Console */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.console-wrapper {
-    margin-top: 10px;
+.media-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
 }
 
 #console {
-    background: rgba(2, 8, 18, 0.88);
-    color: var(--primary-blue);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 12px;
-    height: 120px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 12px;
-    text-align: right;
-    direction: ltr;
-    overflow-y: auto;
-    white-space: pre-wrap;
-    margin: 0;
+  background: var(--console-bg);
+  color: var(--console-green);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  height: 120px;
+  overflow-y: auto;
+  border: 1px solid rgba(56, 239, 125, 0.2);
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
-
-/* Footer Styling */
-.footer {
-    text-align: center;
-    margin-top: 15px;
-    color: var(--text-muted);
-    font-size: 12px;
-}
-
-.info-card {
-    background: rgba(0, 15, 35, 0.75);
-    display: inline-block;
-    padding: 8px 22px;
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    margin-bottom: 8px;
-    backdrop-filter: blur(5px);
-}
-
-.contacts {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin: 0 0 4px 0;
-}
-
-.address {
-    color: var(--primary-blue);
-    font-size: 13px;
-    margin: 0;
-    font-weight: 600;
-}
-
-.developer-info {
-    margin-top: 4px;
-}
-
-.copyright {
-    margin: 0;
-    color: var(--text-muted);
-    font-size: 12px;
-}
-
-.dev-credits {
-    margin: 3px 0 0 0;
-    font-size: 11px;
-    color: #88aadd;
-    direction: ltr;
-}
-
-.dev-name {
-    color: var(--primary-blue);
-    font-weight: bold;
-} 
