@@ -8,7 +8,7 @@ Enter:root {
 }
 
 body {
-    background: url('cat.png') no-repeat center center fixed;
+    background: url('background-mobile.png') no-repeat center center fixed;
     background-size: cover;
     color: var(--text-light);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
